@@ -2,8 +2,7 @@
 
 /*Color scheme:
 background color: #3b5bdb;
-font color: #4c6ef5;
-color in card: #dbe4ff;
+background color in card: #dbe4ff;
 */
 
 * {
@@ -11,6 +10,12 @@ color in card: #dbe4ff;
   margin: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+}
+
+.heading {
+  font-weight: 600;
+  padding-bottom: 60px;
+  color: #ffffff;
 }
 
 body {
@@ -34,6 +39,11 @@ body {
   justify-content: center;
 }
 
+.welcome {
+  width: 300px;
+  padding-bottom: 30px;
+}
+
 button {
   border: none;
   outline: none;
@@ -47,9 +57,9 @@ button {
   border-radius: 0.2em;
 }
 
-/*
 #restart {
-}*/
+  margin-top: 0.9em;
+}
 
 #display-container {
   background-color: #ffffff;
@@ -73,10 +83,73 @@ button {
   border-bottom: 0.1em solid #ced4da;
 }
 
+.timer {
+  width: 25px;
+}
+
+.completed {
+  width: 250px;
+  padding-bottom: 30px;
+}
+
+.timer-div {
+  background-color: #dbe4ff;
+  width: 7.5em;
+  border-radius: 1.8em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7em 1.8em;
+}
+
+.question {
+  margin-bottom: 1.25em;
+  font-weight: 600;
+}
+
+.option-div {
+  font-size: 0.9em;
+  width: 100%;
+  padding: 1em;
+  margin: 0.3em 0;
+  text-align: left;
+  outline: none;
+  background: transparent;
+  border: 1px solid #c0bfd2;
+  border-radius: 0.3em;
+}
+
+.option-div:disabled {
+  color: #000000;
+  cursor: not-allowed;
+}
+
+#next-button {
+  font-size: 1em;
+  margin-top: 1.5em;
+  background-color: #3b5bdb;
+  color: #ffffff;
+  padding: 0.7em 1.8em;
+  border-radius: 0.5em;
+  float: right;
+}
+
 .hide {
   display: none;
 }
 
-.timer {
-  width: 25px;
+.incorrect {
+  background-color: #ffdde0;
+  color: #d32f2f;
+  border-color: #d32f2f;
+}
+.correct {
+  background-color: #e7f6d5;
+  color: #689f38;
+  border-color: #689f38;
+}
+
+#user-score {
+  font-size: 1.5em;
+  color: #ffffff;
 }
