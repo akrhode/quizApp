@@ -13,6 +13,7 @@ let questionCount;
 let scoreCount = 0;
 let count = 11;
 let countdown;
+
 //Questions and Options array
 const quizArray = [
   {
@@ -58,6 +59,7 @@ restart.addEventListener("click", () => {
   displayContainer.classList.remove("hide");
   scoreContainer.classList.add("hide");
 });
+
 //Next Button
 nextBtn.addEventListener(
   "click",
@@ -136,7 +138,8 @@ function quizCreator() {
     quizContainer.appendChild(div);
   }
 }
-//Checker Function to check if the option is correct or not
+
+//Function to check if the option is correct or not
 function checker(userOption) {
   let userSolution = userOption.innerText;
   let question =
@@ -162,7 +165,8 @@ function checker(userOption) {
     element.disabled = true;
   });
 }
-//initial setup
+
+//Initial setup
 function initial() {
   quizContainer.innerHTML = "";
   questionCount = 0;
@@ -173,13 +177,14 @@ function initial() {
   quizCreator();
   quizDisplay(questionCount);
 }
-//when user click on start button
+//When the user clicks on the start button
 startButton.addEventListener("click", () => {
   startScreen.classList.add("hide");
   displayContainer.classList.remove("hide");
   initial();
 });
-//hide quiz and display start screen
+
+//Hide quiz and display start screen
 window.onload = () => {
   startScreen.classList.remove("hide");
   displayContainer.classList.add("hide");
